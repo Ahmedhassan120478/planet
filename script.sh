@@ -12,7 +12,7 @@ NEW_IMAGE_TAG=$1
 
 # Update the Helm values.yaml file
 cd helm || exit 1
-yq eval ".img = \"${NEW_IMAGE_TAG}\"" -i values.yaml
+yqq eval ".img = \"${NEW_IMAGE_TAG}\"" -i values.yaml
 
 # Output the updated values.yaml for verification
 echo "Updated values.yaml:"
