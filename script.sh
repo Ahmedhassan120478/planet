@@ -2,8 +2,8 @@
 pwd
 ls
 # Ensure yq is available
-if ! command -v yq &> /dev/null; then
-    echo "yq is not installed. Exiting."
+if ! command -v yqq &> /dev/null; then
+    echo "yqq is not installed. Exiting."
     exit 1
 fi
 
