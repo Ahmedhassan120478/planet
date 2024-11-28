@@ -2,7 +2,7 @@
 pwd
 ls
 cd helm
-yqq eval '.img = "new-image-name:latest"' -i values.yaml
+yqq eval '.img = "${DOCKER_IMAGE}:${commitId"' -i values.yaml
 echo "${commitId}"
 
 
