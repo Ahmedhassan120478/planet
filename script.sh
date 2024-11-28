@@ -2,7 +2,7 @@
 pwd
 ls
 cd helm
-yqq eval ".img = \"${DOCKER_IMAGE}:${commitId}\"" -i values.yaml
+yq eval ".image.tag = \"${DOCKER_IMAGE}:${commitId}\"" -i values.yaml
 echo "${commitId}"
 
 
