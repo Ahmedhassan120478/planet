@@ -6,7 +6,8 @@ echo "DOCKER_IMAGE=${DOCKER_IMAGE}"
 echo "commitId=${commitId}"
 yqq eval ".image.tag = \"${commitId}-abc\"" -i values.yaml
 echo "${commitId}"
-sh "helm upgrade nginx ./helm --namespace hassan --install"
+helm upgrade nginx ./ --namespace hassan --install || { echo "Helm upgrade failed"; exit 1; }
+
 
 
 
